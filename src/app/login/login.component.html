@@ -1,0 +1,179 @@
+<mat-card [ngStyle.gt-xs]="{'margin.px': 50,'background-color': '#3f51b5','color': 'white'}"
+  style="background-color: #dddee0;">
+  <mat-card-header>
+    <img mat-card-avatar
+      src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg">
+    <mat-card-title>Atcerppu</mat-card-title>
+    <mat-card-subtitle>Login or Register</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content></mat-card-content>
+  <mat-card-content>
+    <div fxLayout fxLayout.lt-md="column">
+      <div fxFlex.gt-sm="65%">
+        <mat-accordion>
+          <mat-expansion-panel expanded hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                I have my own account
+              </mat-panel-title>
+
+              <mat-panel-description>
+                Login
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <form #loginForm="ngForm" (ngSubmit)="onSubmitLogin(loginForm)">
+              <mat-form-field class="input-full-size">
+                <input matInput placeholder="Email" ngModel name="email" required type="email"
+                  [errorStateMatcher]="matcher">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="input-full-size">
+                <input matInput placeholder="Password" ngModel name="password" required type="password"
+                  [errorStateMatcher]="matcher">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <div id="recaptcha-container"></div>
+
+              <div fxLayout style="justify-content: flex-end;">
+                <button mat-raised-button type="submit">Login</button>
+              </div>
+            </form>
+
+          </mat-expansion-panel>
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                I don't have an account
+              </mat-panel-title>
+              <mat-panel-description>
+                Register
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <form>
+              <mat-radio-group aria-label="Select an option" required ngModel name="usertype">
+                <mat-radio-button value="jobseeker">Jobseeker</mat-radio-button>
+                <mat-radio-button value="employer">Employer</mat-radio-button>
+              </mat-radio-group>
+              <mat-form-field class="input-full-size">
+                <input matInput placeholder="Full Name" ngModel name="fullname" type="text" required
+                  [errorStateMatcher]="matcher">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Fullname is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="input-full-size">
+                <input matInput placeholder="Mobile Number" ngModel name="mobile" type="text" required
+                  [errorStateMatcher]="matcher">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Mobile number is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="input-full-size">
+                <input matInput placeholder="Email" ngModel name="email" type="email" required
+                  [errorStateMatcher]="matcher">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="input-full-size">
+                <input matInput placeholder="Password" ngModel name="password" type="password" required
+                  [errorStateMatcher]="matcher">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="input-full-size">
+                <input matInput placeholder="Re-Password" ngModel name="repassword" type="password" required
+                  [errorStateMatcher]="matcher">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  Re-password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+              <div fxLayout style="justify-content: flex-end;">
+                <button mat-raised-button>Register</button>
+              </div>
+            </form>
+
+          </mat-expansion-panel>
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                I can't remember my password
+              </mat-panel-title>
+              <mat-panel-description>
+                Forgot Password
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <form>
+              <mat-form-field class="input-full-size">
+                <input matInput placeholder="Email" ngModel name="email" type="email" required
+                  [errorStateMatcher]="matcher">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+              <div fxLayout style="justify-content: flex-end;">
+                <button mat-raised-button>Send Password</button>
+              </div>
+            </form>
+
+          </mat-expansion-panel>
+
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Any alternative SignIn methods?
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+              <a mat-list-item href="javascript:void(0);" (click)="signIn('google')">Google SignIn</a>
+              <a mat-list-item href="javascript:void(0);" (click)="signIn('facebook')">Facebook SignIn</a>
+              <a mat-list-item href="javascript:void(0);" (click)="signIn('github')">Github SignIn</a>
+              <a mat-list-item href="javascript:void(0);" (click)="signIn('twitter')">Twitter SignIn</a>
+              <a mat-list-item href="javascript:void(0);" (click)="signIn('phone')">Phone SignIn</a>
+            </mat-nav-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+
+      <div fxLayout>
+        <p>Someother ads</p>
+      </div>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Terms & Conditions</button>
+    <button mat-button>Privacy Policy</button>
+    <button mat-button style="float: right;">v0.1</button>
+  </mat-card-actions>
+</mat-card>

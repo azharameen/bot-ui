@@ -1,0 +1,25 @@
+.input-full-size {
+  width: 100%;
+}
+
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+
+.bot-message {
+  border-radius: 5px;
+  background-color: #78848d;
+  color: white;
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.user-message {
+  border-radius: 5px;
+  background-color: #37546b;
+  color: white;
+  text-align: left;
+  margin-bottom: 8px;
+}

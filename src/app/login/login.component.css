@@ -1,0 +1,11 @@
+.align-tab-icon {
+  margin-right: 8px;
+}
+
+.input-full-size {
+  width: 100%;
+}
+
+.mat-radio-button~.mat-radio-button {
+  margin-left: 16px;
+}

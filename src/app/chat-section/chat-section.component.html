@@ -1,0 +1,39 @@
+<mat-card style="padding: 0;margin: 0;">
+  <mat-card-header>
+    <button mat-icon-button fxHide fxShow.lt-sm (click)="openChatSection()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <button mat-icon-button fxHide fxShow.lt-sm (click)="openDrawer()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-card-title>Chat</mat-card-title>
+    <mat-card-subtitle>Chat</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content style="height: 512px;overflow: auto;margin: 0;background: #eff1f3;">
+    <mat-list style="margin: 10px;">
+      <mat-list-item *ngFor="let msg of messages" [class.user-message]="msg.by=='bot'"
+        [class.bot-message]="msg.by=='user'">
+        <span mat-line>{{msg.msg}}</span>
+
+        <button *ngIf="msg.by=='bot'" mat-button mat-line style="margin-top: 6px;">Yes</button>
+        <button *ngIf="msg.by=='bot'" mat-button mat-line style="margin-top: 6px;">No</button>
+        <span mat-line style="font-size: 10px;"> {{msg.date | date}} </span>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+  <mat-card-footer style="background-color: #ffffff;color: #000000;margin: 0;">
+    <form (ngSubmit)="onSubmitChat()">
+      <mat-form-field class="input-full-size" appearance="outline">
+        <mat-label>What can I do for you?</mat-label>
+        <input autocomplete="off" matInput placeholder="Type your message" style="width:100%;" name="message"
+          [(ngModel)]="message">
+        <button mat-icon-button matSuffix type="button" (click)="onSubmitChat()">
+          <mat-icon matSuffix>send</mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
+  </mat-card-footer>
+
+</mat-card>

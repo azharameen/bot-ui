@@ -1,0 +1,221 @@
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" style="margin:20px;">
+
+  <div fxFlex="50%" fxFlex.lt-sm="100%">
+    <mat-card class="card-gap">
+      <mat-card-header>
+        <img mat-card-avatar
+          src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+          alt="my profile pic">
+        <mat-card-title>Ameen</mat-card-title>
+        <mat-card-subtitle>Senior Software Engineer</mat-card-subtitle>
+
+        <button mat-icon-button [matMenuTriggerFor]="seekerProfileOptionsMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+
+        <mat-menu #seekerProfileOptionsMenu="matMenu">
+          <button mat-menu-item>View</button>
+          <button mat-menu-item>Update</button>
+          <button mat-menu-item>Shortlist</button>
+          <button mat-menu-item>Block</button>
+        </mat-menu>
+      </mat-card-header>
+      <mat-card-actions mat-card-subtitle>
+        The most basic card needs only an element with some actions. However, Angular Material provides a
+        number of preset sections that you can use inside of an:
+      </mat-card-actions>
+      <mat-card-content>
+        <mat-list role="list" dense>
+          <mat-list-item role="listitem">Item 1</mat-list-item>
+          <mat-list-item role="listitem">Item 2</mat-list-item>
+          <mat-list-item role="listitem">Item 3</mat-list-item>
+        </mat-list>
+
+
+      </mat-card-content>
+      <mat-card-content>
+        <p>Technical Skills</p>
+        <mat-chip-list aria-orientation="vertical">
+          <mat-chip selected>Papadum</mat-chip>
+          <mat-chip selected>Naan</mat-chip>
+          <mat-chip selected>Papadum</mat-chip>
+          <mat-chip selected>Dal</mat-chip>
+          <mat-chip selected>Dal</mat-chip>
+          <mat-chip selected>Naan</mat-chip>
+        </mat-chip-list>
+
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-accordion multi>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Educational Info
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-list dense>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+            </mat-list>
+
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Career Info
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-list dense>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+            </mat-list>
+
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Projects
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Upcoming feature...</p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Certifications
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Upcoming feature...</p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Achievements
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Upcoming feature...</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+
+  <div fxFlex="50%" fxFlex.lt-sm="100%">
+
+
+
+    <mat-card class="card-gap">
+      <mat-card-header>
+        <img mat-card-avatar
+          src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+          alt="my profile pic">
+        <mat-card-title>Matrimony.com Limited</mat-card-title>
+        <mat-card-subtitle>Chennai</mat-card-subtitle>
+
+        <button mat-icon-button [matMenuTriggerFor]="empProfileOptionsMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+
+        <mat-menu #empProfileOptionsMenu="matMenu">
+          <button mat-menu-item>View</button>
+          <button mat-menu-item>Update</button>
+          <button mat-menu-item>Shortlist</button>
+          <button mat-menu-item>Block</button>
+        </mat-menu>
+      </mat-card-header>
+      <mat-card-actions mat-card-subtitle>
+        The most basic card needs only an element with some actions. However, Angular Material provides a
+        number of preset sections that you can use inside of an:
+      </mat-card-actions>
+      <mat-card-content>
+        <mat-list role="list" dense>
+          <mat-list-item role="listitem">Item 1</mat-list-item>
+          <mat-list-item role="listitem">Item 2</mat-list-item>
+          <mat-list-item role="listitem">Item 3</mat-list-item>
+        </mat-list>
+
+
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-accordion multi>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Posted Jobs
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-list dense>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+              <mat-list-item>
+                <img matListAvatar
+                  src="https://lh3.googleusercontent.com/-tnQTDnRtlnk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reA-XliHWxSYx_PB-1ttxrUDemdsw.CMID/s96-c/photo.jpg"
+                  alt="Profile">
+                <h3 matLine> B.E Computer Science & Engineering </h3>
+                <p matLine>Bharathidasan Engineering COllege</p>
+              </mat-list-item>
+            </mat-list>
+
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+
+</div>
